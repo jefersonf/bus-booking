@@ -10,7 +10,10 @@ import (
 )
 
 var (
-	listenAddr = "localhost:3000"
+	listenAddr        = "localhost:3000"
+	readTimeout       = 1 * time.Second
+	writeTimeout      = 1 * time.Second
+	readHeaderTimeout = 1 * time.Second
 )
 
 func StartBusBookingServer() {
@@ -19,8 +22,11 @@ func StartBusBookingServer() {
 	signal.Notify(stopChan, os.Interrupt)
 
 	server := &http.Server{
-		Addr:    listenAddr,
-		Handler: handlers(),
+		Addr:              listenAddr,
+		Handler:           handlers(),
+		ReadTimeout:       readTimeout,
+		WriteTimeout:      writeTimeout,
+		ReadHeaderTimeout: readHeaderTimeout,
 	}
 
 	go func() {
@@ -35,5 +41,5 @@ func StartBusBookingServer() {
 	defer cancel()
 
 	server.Shutdown(ctx)
-	log.Println("Bus booking API server gracefully stopped.")
+	log.Println("Bus booking API server gracefully stopped")
 }
