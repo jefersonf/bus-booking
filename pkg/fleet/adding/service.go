@@ -25,6 +25,7 @@ type busAddingService struct {
 	repo Repository
 }
 
+// AddBus persists the given bus(es) to storage.
 func (s *busAddingService) AddBus(b ...Bus) error {
 	fleet := s.repo.GetFleet()
 	for _, nb := range b {
