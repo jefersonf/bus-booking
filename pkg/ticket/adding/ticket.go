@@ -1,6 +1,6 @@
 package adding
 
-import "go.starlark.net/lib/time"
+import "time"
 
 // Ticket decribes the properties of a ticket to be added.
 type Ticket struct {
