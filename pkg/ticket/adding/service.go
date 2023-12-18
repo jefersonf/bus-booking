@@ -1,5 +1,7 @@
 package adding
 
+import "github.com/jefersonf/bus-booking/pkg/ticket/listing"
+
 // Service provides ticket adding operations.
 type Service interface {
 	AddTicket(Ticket) error
@@ -9,6 +11,8 @@ type Service interface {
 type Repository interface {
 	// AddTicket saves the given ticket to the storage.
 	AddTicket(Ticket) error
+	// GetTickets return all the tickets saved.
+	GetTickets() []listing.Ticket
 }
 
 type ticketAddingService struct {
