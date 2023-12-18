@@ -11,5 +11,5 @@ type Ticket struct {
 	PassengerName      string    `json:"passenger_name"`
 	SeatNumber         int       `json:"seat_number"`
 	Price              float32   `json:"price"`
-	DepartureDate      time.Time `json:"departure_date"`
+	DepartureDatetime  time.Time `json:"departure_datetime"`
 }
