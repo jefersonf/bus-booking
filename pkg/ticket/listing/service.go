@@ -13,3 +13,22 @@ type Repository interface {
 	// GetTickets returns all tickets saved in storage.
 	GetTickets() []Ticket
 }
+
+type ticketListingService struct {
+	repo Repository
+}
+
+// GetTicket returns a ticket.
+func (s *ticketListingService) GetTicket(id string) (Ticket, error) {
+	return s.repo.GetTicket(id)
+}
+
+// GetTickets returns all tickets.
+func (s *ticketListingService) GetTickets() []Ticket {
+	return s.repo.GetTickets()
+}
+
+// NewService creates a ticket listing service with the necessary dependencies.
+func NewService(r Repository) Service {
+	return &ticketListingService{r}
+}
