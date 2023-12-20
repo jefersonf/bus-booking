@@ -12,4 +12,5 @@ type Ticket struct {
 	SeatNumber         int       `json:"seat_number"`
 	PricePaid          float32   `json:"price_paid"`
 	DepartureDatetime  time.Time `json:"departure_datetime"`
+	CreatedAt          time.Time `json:"created_at"`
 }
