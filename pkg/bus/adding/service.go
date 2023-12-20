@@ -3,7 +3,7 @@ package adding
 import (
 	"errors"
 
-	"github.com/jefersonf/bus-booking/pkg/fleet/listing"
+	"github.com/jefersonf/bus-booking/pkg/bus/listing"
 )
 
 var ErrBusAlreadyExists = errors.New("bus already exists")
