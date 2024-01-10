@@ -4,9 +4,10 @@ type IdentityType string
 
 // Identity describes the properties of a single passenger identity type.
 type Identity struct {
-	Type  IdentityType `json:"type"`
-	Desc  string       `json:"description"`
-	Value string       `json:"value"`
+	Description  string `json:"description"`
+	Value        string `json:"value"`
+	Type         IdentityType `json:"type"`
+
 }
 
 // Passenger describes the identity types registered by the passenger.
