@@ -12,7 +12,7 @@ import (
 var (
 	listenAddr        = "localhost:3000"
 	readTimeout       = 1 * time.Second
-	writeTimeout      = 1 * time.Second
+	writeTimeout      = 2 * time.Second
 	readHeaderTimeout = 1 * time.Second
 )
 
