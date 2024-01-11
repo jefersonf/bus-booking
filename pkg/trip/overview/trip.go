@@ -8,3 +8,7 @@ type Trip struct {
 	Destination         string        `json:"going_to"`
 	EstimatedTravelTime time.Duration `json:"ett"`
 }
+
+func (t *Trip) String() string {
+	return fmt.Sprintf("%s to %s in %v", t.Origin, t.Destination, t.EstimatedTravelTime)
+}
