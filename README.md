@@ -1,3 +1,9 @@
 # Bus Booking System Using DDD
 
-Practicing domain-driven design while development a complete bus booking sytem from scratch and using Go!
+Practice domain-driven design while development a complete bus booking sytem from scratch and using Go!
+
+In this project (named `Busaum`) we're going to implement the following features:
+
+- Ticketing service
+- Payment service
+- Trip-selection service.
