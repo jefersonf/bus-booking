@@ -1,6 +1,9 @@
 package overview
 
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 // Trip describes the properties of a trip overview.
 type Trip struct {
