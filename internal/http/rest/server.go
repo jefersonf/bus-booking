@@ -11,9 +11,9 @@ import (
 
 var (
 	listenAddr        = "localhost:3000"
-	readTimeout       = 1 * time.Second
-	writeTimeout      = 2 * time.Second
-	readHeaderTimeout = 1 * time.Second
+	readTimeout       = 3 * time.Second
+	writeTimeout      = 3 * time.Second
+	readHeaderTimeout = 3 * time.Second
 )
 
 func StartBusBookingServer() {
