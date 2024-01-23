@@ -7,3 +7,7 @@ In this project (named `Busaum`) we're going to implement the following features
 - Ticketing service
 - Payment service
 - Trip-selection service.
+
+## Ticketing service
+
+The ticketing service provides ticket buying operations.
