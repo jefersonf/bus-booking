@@ -2,15 +2,7 @@ package listing
 
 // TicketService provides ticket listing operations.
 type TicketService interface {
-	GetTicket(string) (Ticket, error)
-	GetTickets() []Ticket
-}
-
-// TicketRepository provides access to the ticket storage.
-type TicketRepository interface {
-	// GetTicket returns the ticket with given ID.
-	GetTicket(string) (Ticket, error)
-	// GetTickets returns all tickets saved in storage.
+	GetTicket(id string) (Ticket, error)
 	GetTickets() []Ticket
 }
 
@@ -18,14 +10,14 @@ type ticketService struct {
 	repo TicketRepository
 }
 
-// GetTicket returns a ticket.
+// GetTicket returns a ticket and possibly a non-nil error.
 func (s *ticketService) GetTicket(id string) (Ticket, error) {
-	return s.repo.GetTicket(id)
+	return s.repo.GetOne(id)
 }
 
 // GetTickets returns all tickets.
 func (s *ticketService) GetTickets() []Ticket {
-	return s.repo.GetTickets()
+	return s.repo.GetAll()
 }
 
 // NewTicketService creates a ticket listing service with the necessary dependencies.
