@@ -10,4 +10,6 @@ type PassengerRepository interface {
 	GetByPhone(phone string) (listing.Passenger, error)
 	// GetByEmail returns the passenger with given email.
 	GetByEmail(email string) (listing.Passenger, error)
+	// Update replaces passenger info with given passenger.
+	Update(passenger listing.Passenger) error
 }
