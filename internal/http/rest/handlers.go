@@ -11,5 +11,5 @@ func handlers() *http.ServeMux {
 }
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
-	_, _ = w.Write([]byte(`{"status": "running"}`))
+	_, _ = w.Write([]byte(`{"status": "API server up and running"}`))
 }
