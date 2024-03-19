@@ -7,7 +7,7 @@ import (
 	"github.com/jefersonf/bus-booking/pkg/passenger/listing"
 )
 
-var ErrPassengerAlreadyRegisted = errors.New("passenger already registed")
+var ErrPassengerAlreadyRegistered = errors.New("passenger already registered")
 
 // Service provides passenger registering operations.
 type Servive interface {
@@ -36,7 +36,7 @@ func (s *passengerRegisteringService) AddPassenger(p Passenger) error {
 				}
 
 				if rInfo.Value == info.Value {
-					return ErrPassengerAlreadyRegisted
+					return ErrPassengerAlreadyRegistered
 				}
 
 			}
