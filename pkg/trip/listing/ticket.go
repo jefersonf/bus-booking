@@ -6,7 +6,7 @@ import (
 	"github.com/google/uuid"
 )
 
-// Ticket describes a trip ticket.
+// Ticket describes a trip ticket to be listed.
 type Ticket struct {
 	ID            uuid.UUID
 	OriginID      string
