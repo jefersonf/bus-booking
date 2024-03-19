@@ -12,8 +12,8 @@ var (
 
 // PassengerService provides passenger registering operations.
 type PassengerService interface {
-	AddPassenger(passenger Passenger) error
-	AddPassengers(pp ...Passenger) []error
+	AddPassenger(Passenger) error
+	AddPassengers(...Passenger) []error
 }
 
 type passengerService struct {
