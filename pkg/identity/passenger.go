@@ -2,7 +2,7 @@ package identity
 
 type IdentityType string
 
-// Identity describes the properties of a single passenger identity type.
+// IdentityInfo describes the properties of a single passenger identity type.
 type IdentityInfo struct {
 	Description  string       `json:"description"`
 	Value        string       `json:"value"`
