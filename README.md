@@ -11,3 +11,7 @@ In this project (named `Busaum`) we're going to implement the following features
 ## Ticketing service
 
 The ticketing service provides ticket buying operations.
+
+## Bus service
+
+The bus service provides bus adding and listing operations.
