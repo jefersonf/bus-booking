@@ -1,4 +1,4 @@
-# Bus Booking System Using DDD
+# Bus Booking System Using DDD - Case Study
 
 Practicing domain-driven design while development a complete bus booking system from scratch and using Go!
 
