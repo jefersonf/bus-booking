@@ -1,8 +1,7 @@
-package repository
+package registering
 
 import (
 	"github.com/jefersonf/bus-booking/internal/listing"
-	"github.com/jefersonf/bus-booking/internal/registering"
 )
 
 // Passenger provides access to passenger storage.
@@ -21,7 +20,7 @@ type RegisteringPassenger interface {
 
 type CreatePassenger interface {
 	// Create persists the given passenger to storage.
-	Create(passenger registering.Passenger) error
+	Create(passenger Passenger) error
 }
 
 type ReadPassenger interface {
