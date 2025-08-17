@@ -8,5 +8,7 @@ import (
 type Passenger struct {
 	ID        uuid.UUID `json:"id"`
 	FullName  string    `json:"fullname"`
+	Phone     string    `json:"phone"`
+	Email     string    `json:"email"`
 	BirthYear int       `json:"byr"`
 }

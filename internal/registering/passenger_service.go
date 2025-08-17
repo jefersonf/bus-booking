@@ -3,6 +3,8 @@ package registering
 import (
 	"errors"
 	"fmt"
+
+	"github.com/jefersonf/bus-booking/internal/repository"
 )
 
 var (
@@ -17,7 +19,7 @@ type PassengerService interface {
 }
 
 type passengerService struct {
-	repo PassengerRepository
+	repo repository.RegisteringPassenger
 }
 
 // AddPassenger adds a new passenger and possibly returns a non-nil error.
@@ -47,6 +49,6 @@ func (s *passengerService) AddPassengers(pp ...Passenger) []error {
 }
 
 // NewPassengerService creates a passenger service with necessary dependencies.
-func NewPassengerService(r PassengerRepository) PassengerService {
+func NewPassengerService(r repository.RegisteringPassenger) PassengerService {
 	return &passengerService{r}
 }

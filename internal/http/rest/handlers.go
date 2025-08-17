@@ -6,7 +6,12 @@ import (
 
 func handlers() *http.ServeMux {
 	routes := http.NewServeMux()
+<<<<<<< HEAD
 	routes.HandleFunc("/", indexHandler)
+=======
+	routes.HandleFunc("/", baseURI)
+
+>>>>>>> d2d8cc2 (:sparkles: improvements)
 	return routes
 }
 
