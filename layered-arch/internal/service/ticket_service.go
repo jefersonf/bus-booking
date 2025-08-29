@@ -25,6 +25,7 @@ func (s *TicketService) ListAvailableTrips(ctx context.Context, origin, destinat
 	return s.tripRepo.FindAvailableTrips(ctx, origin, destination)
 }
 
+// PurchaseTicket processes the ticket purchase for a given trip and passenger.
 func (s *TicketService) PurchaseTicket(ctx context.Context, tripID, passengerID, seatNumber string) (*domain.Ticket, error) {
 	// TODO 1. Validate trip existence and seat availability.
 	// TODO 2. Process payment
